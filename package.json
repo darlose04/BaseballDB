@@ -1,0 +1,22 @@
+{
+  "name": "baseballdb",
+  "version": "1.0.0",
+  "description": "baseball database for fantasy baseball",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darlose04/BaseballDB.git"
+  },
+  "author": "Zach Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darlose04/BaseballDB/issues"
+  },
+  "homepage": "https://github.com/darlose04/BaseballDB#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
