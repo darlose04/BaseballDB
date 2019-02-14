@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 
 // require models
 let BatterProjections = require('./models/batterProj');
+let PitcherProjections = require('./models/pitcherProj');
 
 const port = 3000;
 
@@ -25,6 +26,18 @@ app.get('/battingprojections', (req, res) => {
       console.log(err);
     } else {
       res.render("batterProjections", {batters: allBatters});
+    }
+  });
+});
+
+// pitching projections route
+app.get('/pitchingprojections', (req, res) => {
+  // get all pitcher projections from the database
+  PitcherProjections.find({}, (err, allPitchers) => {
+    if(err) {
+      console.log(err);
+    } else {
+      res.render("pitcherProjections", {pitchers: allPitchers});
     }
   });
 });
