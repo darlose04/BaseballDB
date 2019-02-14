@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-hitterProjectionSchema = new mongoose.Schema({
+batterProjectionSchema = new mongoose.Schema({
   Player: String,
   Team: String,
   Pos: String,
@@ -14,3 +14,5 @@ hitterProjectionSchema = new mongoose.Schema({
   SLG: Number,
   OPS: Number,
 });
+
+module.exports = mongoose.model({"BatterProjections", batterProjectionSchema});
