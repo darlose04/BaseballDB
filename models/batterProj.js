@@ -12,7 +12,7 @@ batterProjectionSchema = new mongoose.Schema({
   AVG: Number,
   OBP: Number,
   SLG: Number,
-  OPS: Number,
+  OPS: Number
 });
 
 module.exports = mongoose.model("BatterProjections", batterProjectionSchema);
