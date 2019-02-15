@@ -6,6 +6,8 @@ const mongoose = require('mongoose');
 // require models
 let BatterProjections = require('./models/batterProj');
 let PitcherProjections = require('./models/pitcherProj');
+let Batters2018 = require('./models/batters2018');
+let Batters2017 = require('./models/batters2017');
 
 const port = 3000;
 
@@ -26,6 +28,28 @@ app.get('/battingprojections', (req, res) => {
       console.log(err);
     } else {
       res.render("batterProjections", {batters: allBatters});
+    }
+  });
+});
+
+// batting 2018 stats route
+app.get('/batting2018', (req, res) => {
+  Batters2018.find({}, (err, allBatters) => {
+    if(err) {
+      console.log(err);
+    } else {
+      res.render("batters2018", {batters: allBatters});
+    }
+  });
+});
+
+// batting 2017 stats route
+app.get('/batting2017', (req, res) => {
+  Batters2018.find({}, (err, allBatters) => {
+    if(err) {
+      console.log(err);
+    } else {
+      res.render("batters2017", {batters: allBatters});
     }
   });
 });
