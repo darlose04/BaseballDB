@@ -15,4 +15,4 @@ batters2018Schema = new mongoose.Schema({
   OPS: Number
 });
 
-module.exports = mongoose.model("2018Batters", batters2018Schema);
+module.exports = mongoose.model("Batters2018", batters2018Schema);
