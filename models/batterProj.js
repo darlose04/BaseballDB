@@ -13,6 +13,6 @@ batterProjectionSchema = new mongoose.Schema({
   OBP: Number,
   SLG: Number,
   OPS: Number
-});
+}, {collection: 'batterprojections'});
 
 module.exports = mongoose.model("BatterProjections", batterProjectionSchema);
