@@ -34,22 +34,22 @@ app.get('/battingprojections', (req, res) => {
 
 // batting 2018 stats route
 app.get('/batting2018', (req, res) => {
-  Batters2018.find({}, (err, allBatters) => {
+  Batters2018.find({}, (err, all2018Batters) => {
     if(err) {
       console.log(err);
     } else {
-      res.render("batters2018", {batters: allBatters});
+      res.render("batters2018", {batters2018: all2018Batters});
     }
   });
 });
 
 // batting 2017 stats route
 app.get('/batting2017', (req, res) => {
-  Batters2018.find({}, (err, allBatters) => {
+  Batters2017.find({}, (err, all2017Batters) => {
     if(err) {
       console.log(err);
     } else {
-      res.render("batters2017", {batters: allBatters});
+      res.render("batters2017", {batters2017: all2017Batters});
     }
   });
 });
