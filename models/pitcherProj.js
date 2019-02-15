@@ -12,6 +12,6 @@ pitcherProjectionSchema = new mongoose.Schema({
   SV: Number,
   ERA: Number,
   WHIP: Number
-});
+}, {collection: 'pitcherprojections'});
 
 module.exports = mongoose.model("PitcherProjections", pitcherProjectionSchema);
