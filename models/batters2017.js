@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-batters2017Schema = new mongoose.Schema({
+batting2017Schema = new mongoose.Schema({
   Player: String,
   Team: String,
   Pos: String,
@@ -13,6 +13,6 @@ batters2017Schema = new mongoose.Schema({
   OBP: Number,
   SLG: Number,
   OPS: Number
-});
+}, {collection: 'batting2017'});
 
-module.exports = mongoose.model("Batters2017", batters2017Schema);
+module.exports = mongoose.model("Batters2017", batting2017Schema);
