@@ -2,15 +2,16 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
+/*
 // require models
 let BatterProjections = require('./models/batterProj');
 let PitcherProjections = require('./models/pitcherProj');
 let Batters2018 = require('./models/batters2018');
 let Batters2017 = require('./models/batters2017');
-
+*/
 const port = 3000;
 
+// Connect to DB
 mongoose.connect("mongodb://localhost:27017/baseballstats", {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
@@ -19,7 +20,7 @@ app.set("view engine", "ejs");
 app.get('/', (req, res) => {
   res.render("landing");
 });
-
+/*
 // batting projections route
 app.get('/battingprojections', (req, res) => {
   // get all batter projections from the database
@@ -65,5 +66,9 @@ app.get('/pitchingprojections', (req, res) => {
     }
   });
 });
+*/
+
+// Routes
+app.use('/', require('./routes/stats'));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}`));
