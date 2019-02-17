@@ -18,3 +18,5 @@ The app will use Bootstrap 4 on the front end for the design and UI, while using
 ## To-do list
 * organize the pitcher dbs so that the correct stats are all in one spreadsheet/db. Right now, I have two spreadsheets, one for basic stats and one for advanced stats, and for some reason they are different sizes. You'd think the number of pitchers would be the same.
 * need to change how names are displayed in the csv so the alphabetical sorting is by last name
+
+* Added csv to Mongo Atlas and linked it correctly. Hopefully that will work once I get the site hosted
