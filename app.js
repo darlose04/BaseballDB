@@ -16,7 +16,7 @@ const db = require('./config/keys').MongoURI;
 
 // Connect to DB
 // mongoose.connect("mongodb://localhost:27017/baseballstats", {useNewUrlParser: true});
-mongoose.connect(db, {useNewUrlParser: true})
+mongoose.connect(db, {useNewUrlParser: true, dbName: 'baseball'})
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
@@ -32,4 +32,4 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/', require('./routes/stats'));
 
-app.listen(port, () => console.log(`Example app listening on port ${port}`));
+app.listen(port, () => console.log(`Baseball app listening on port ${port}`));
