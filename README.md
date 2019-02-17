@@ -22,7 +22,10 @@ The app will use Bootstrap 4 on the front end for the design and UI, while using
 * Once the site is hosted, use git branches to work on new features. Then merge commits
 * create index routes
 * create blog section
-* create user authentication using notes/code examples from other node app
+  * add blogs to db
+* create user authentication using notes/code examples from other node app.
+  * create login and register routes/views
+  * add users to db
 * Learn more about the dataTables library. 
   * Figure out how to create search features that return multiple hits, such as returning players with >20 homers and an OPS >.800
 
