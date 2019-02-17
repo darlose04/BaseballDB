@@ -18,5 +18,12 @@ The app will use Bootstrap 4 on the front end for the design and UI, while using
 ## To-do list
 * organize the pitcher dbs so that the correct stats are all in one spreadsheet/db. Right now, I have two spreadsheets, one for basic stats and one for advanced stats, and for some reason they are different sizes. You'd think the number of pitchers would be the same.
 * need to change how names are displayed in the csv so the alphabetical sorting is by last name
+* **Host site with heroku or something similar. Do some research on what may work best**
+* Once the site is hosted, use git branches to work on new features. Then merge commits
+* create index routes
+* create blog section
+* create user authentication using notes/code examples from other node app
+* Learn more about the dataTables library. 
+  * Figure out how to create search features that return multiple hits, such as returning players with >20 homers and an OPS >.800
 
 * Added csv to Mongo Atlas and linked it correctly. Hopefully that will work once I get the site hosted
