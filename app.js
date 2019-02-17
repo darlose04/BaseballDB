@@ -11,8 +11,15 @@ let Batters2017 = require('./models/batters2017');
 */
 const port = 3000;
 
+// DB config
+const db = require('./config/keys').MongoURI;
+
 // Connect to DB
-mongoose.connect("mongodb://localhost:27017/baseballstats", {useNewUrlParser: true});
+// mongoose.connect("mongodb://localhost:27017/baseballstats", {useNewUrlParser: true});
+mongoose.connect(db, {useNewUrlParser: true})
+  .then(() => console.log('MongoDB Connected...'))
+  .catch(err => console.log(err));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
@@ -20,53 +27,7 @@ app.set("view engine", "ejs");
 app.get('/', (req, res) => {
   res.render("landing");
 });
-/*
-// batting projections route
-app.get('/battingprojections', (req, res) => {
-  // get all batter projections from the database
-  BatterProjections.find({}, (err, allBatters) => {
-    if(err) {
-      console.log(err);
-    } else {
-      res.render("batterProjections", {batters: allBatters});
-    }
-  });
-});
 
-// batting 2018 stats route
-app.get('/batting2018', (req, res) => {
-  Batters2018.find({}, (err, all2018Batters) => {
-    if(err) {
-      console.log(err);
-    } else {
-      res.render("batters2018", {batters2018: all2018Batters});
-    }
-  });
-});
-
-// batting 2017 stats route
-app.get('/batting2017', (req, res) => {
-  Batters2017.find({}, (err, all2017Batters) => {
-    if(err) {
-      console.log(err);
-    } else {
-      res.render("batters2017", {batters2017: all2017Batters});
-    }
-  });
-});
-
-// pitching projections route
-app.get('/pitchingprojections', (req, res) => {
-  // get all pitcher projections from the database
-  PitcherProjections.find({}, (err, allPitchers) => {
-    if(err) {
-      console.log(err);
-    } else {
-      res.render("pitcherProjections", {pitchers: allPitchers});
-    }
-  });
-});
-*/
 
 // Routes
 app.use('/', require('./routes/stats'));
