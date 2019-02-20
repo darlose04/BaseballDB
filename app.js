@@ -9,7 +9,7 @@ let PitcherProjections = require('./models/pitcherProj');
 let Batters2018 = require('./models/batters2018');
 let Batters2017 = require('./models/batters2017');
 */
-const PORT = process.event.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // DB config
 const db = require('./config/keys').MongoURI;
