@@ -32,4 +32,4 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/', require('./routes/stats'));
 
-app.listen(port, () => console.log(`Baseball app listening on port ${PORT}`));
+app.listen(PORT, () => console.log(`Baseball app listening on port ${PORT}`));
