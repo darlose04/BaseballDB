@@ -9,7 +9,7 @@ let PitcherProjections = require('./models/pitcherProj');
 let Batters2018 = require('./models/batters2018');
 let Batters2017 = require('./models/batters2017');
 */
-const port = 3000;
+const PORT = process.event.PORT || 3000;
 
 // DB config
 const db = require('./config/keys').MongoURI;
@@ -32,4 +32,4 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/', require('./routes/stats'));
 
-app.listen(port, () => console.log(`Baseball app listening on port ${port}`));
+app.listen(port, () => console.log(`Baseball app listening on port ${PORT}`));
