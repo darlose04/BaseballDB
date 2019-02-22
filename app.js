@@ -23,13 +23,12 @@ mongoose.connect(db, {useNewUrlParser: true, dbName: 'baseball'})
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
-// root route
-app.get('/', (req, res) => {
-  res.render("landing");
-});
 
 
 // Routes
+// index routes
+app.use('/', require('./routes/index'));
+// link to stats js routes
 app.use('/', require('./routes/stats'));
 
 app.listen(PORT, () => console.log(`Baseball app listening on port ${PORT}`));
