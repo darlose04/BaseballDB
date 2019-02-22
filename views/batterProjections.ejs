@@ -39,14 +39,46 @@
       <% }) %>
     </tbody>
   </table>
-  <ul>
-    <h1>This is a new list to practice search methods</h1>
-    <% batters.forEach(function(batter) { %>
-      <% if (batter.OPS >= 0.95) { %> 
-        <li><%= batter.Player %></li>
-      <% } %>
-    <% }) %>
-  </ul>
+  <hr>
+  <h1>This is a new table to practice search methods</h1>
+  <table class="table table-sm table-hover table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Player</th>
+        <th>Team</th>
+        <th>Position</th>
+        <th>Games</th>
+        <th>Runs</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>SB</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% batters.forEach(function(batter) { %> 
+        <% if (batter.OPS >= 0.85) { %> 
+          <tr>
+            <td><%= batter.Player %></td>
+            <td><%= batter.Team %></td>
+            <td><%= batter.Pos %></td>
+            <td><%= batter.G %></td>
+            <td><%= batter.R %></td>
+            <td><%= batter.HR %></td>
+            <td><%= batter.RBI %></td>
+            <td><%= batter.SB %></td>
+            <td><%= batter.AVG %></td>
+            <td><%= batter.OBP %></td>
+            <td><%= batter.SLG %></td>
+            <td><%= batter.OPS %></td>
+          </tr>
+        <% } %>
+      <% }) %>
+      </tbody>
+  </table>
 </div>
 
 <% include ./partials/footer %>
