@@ -26,7 +26,7 @@ The app will use Bootstrap 4 on the front end for the design and UI, while using
 * create user authentication using notes/code examples from other node app.
   * create login and register routes/views
   * add users to db
+  * prevent users from accessing stats without being logged in/registered
 * Learn more about the dataTables library. 
   * Figure out how to create search features that return multiple hits, such as returning players with >20 homers and an OPS >.800
 
-* Added csv to Mongo Atlas and linked it correctly. Hopefully that will work once I get the site hosted
