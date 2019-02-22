@@ -29,4 +29,5 @@ The app will use Bootstrap 4 on the front end for the design and UI, while using
   * prevent users from accessing stats without being logged in/registered
 * Learn more about the dataTables library. 
   * Figure out how to create search features that return multiple hits, such as returning players with >20 homers and an OPS >.800
+* when a user logs in, return to the landing page but add a message that welcomes the user
 
