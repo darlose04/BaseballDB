@@ -39,6 +39,14 @@
       <% }) %>
     </tbody>
   </table>
+  <ul>
+    <h1>This is a new list to practice search methods</h1>
+    <% batters.forEach(function(batter) { %>
+      <% if (batter.OPS >= 0.95) { %> 
+        <li><%= batter.Player %></li>
+      <% } %>
+    <% }) %>
+  </ul>
 </div>
 
 <% include ./partials/footer %>
