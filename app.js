@@ -28,6 +28,8 @@ app.set("view engine", "ejs");
 // Routes
 // index routes
 app.use('/', require('./routes/index'));
+// user routes
+app.use('/', require('./routes/users'));
 // link to stats js routes
 app.use('/', require('./routes/stats'));
 
