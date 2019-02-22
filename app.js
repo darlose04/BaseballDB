@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 /*
 // require models
@@ -20,7 +19,7 @@ mongoose.connect(db, {useNewUrlParser: true, dbName: 'baseball'})
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
-app.use(bodyParser.urlencoded({ extended: true }));
+// set view engine to ejs
 app.set("view engine", "ejs");
 
 
