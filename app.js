@@ -19,7 +19,9 @@ mongoose.connect(db, {useNewUrlParser: true, dbName: 'baseball'})
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
+// Bodyparser
 app.use(express.urlencoded({ extended: false }));
+// set view engine to ejs
 app.set("view engine", "ejs");
 
 
