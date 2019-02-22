@@ -60,7 +60,7 @@
     </thead>
     <tbody>
       <% batters.forEach(function(batter) { %> 
-        <% if (batter.OPS >= 0.85) { %> 
+        <% if (batter.OPS >= 0.85 && batter.HR >= 30) { %> 
           <tr>
             <td><%= batter.Player %></td>
             <td><%= batter.Team %></td>

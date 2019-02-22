@@ -29,8 +29,8 @@ app.set("view engine", "ejs");
 // index routes
 app.use('/', require('./routes/index'));
 // user routes
-app.use('/', require('./routes/users'));
+app.use('/users', require('./routes/users'));
 // link to stats js routes
-app.use('/', require('./routes/stats'));
+app.use('/stats', require('./routes/stats'));
 
 app.listen(PORT, () => console.log(`Baseball app listening on port ${PORT}`));
