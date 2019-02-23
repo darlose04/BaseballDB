@@ -12,7 +12,7 @@ module.exports = function(passport) {
       User.findOne({ username: username })
         .then(user => {
           if (!user) {
-            return done(null, false, { message: 'That username is not registered'});
+            return done(null, false, { message: 'That username is not registered' });
           }
 
           // match password
@@ -27,6 +27,17 @@ module.exports = function(passport) {
           });
         })
         .catch(err => console.log(err));
-    });
+    })
   );
+
+  // serialize and deserialize the user
+  passport.serializeUser((user, done) => {
+    done(null, user.id);
+  });
+  
+  passport.deserializeUser((id, done) => {
+    User.findById(id, function(err, user) {
+      done(err, user);
+    });
+  });
 }
