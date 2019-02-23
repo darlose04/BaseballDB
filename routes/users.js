@@ -19,7 +19,7 @@ router.post('/register', (req, res) => {
   let errors = [];
 
   // check required fields
-  if (!name || !password || !password) {
+  if (!username || !password || !password) {
     errors.push({ msg: 'Please fill in all fields' });
   }
 
@@ -31,6 +31,17 @@ router.post('/register', (req, res) => {
   // check password length
   if (password.length < 6) {
     errors.push({ msg: 'Password should be at least 6 characters' });
+  }
+
+  if (errors.length > 0) {
+    res.render('register', {
+      errors,
+      username,
+      password,
+      password2
+    });
+  } else {
+    res.send('pass');
   }
 });
 
