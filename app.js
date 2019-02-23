@@ -28,6 +28,13 @@ app.use(session({
 // connect flash
 app.use(flash());
 
+// global vars for connect-flash messages
+app.use((req, res, next) => {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  next();
+});
+
 // set view engine to ejs
 app.set("view engine", "ejs");
 
