@@ -1,13 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-/*
-// require models
-let BatterProjections = require('./models/batterProj');
-let PitcherProjections = require('./models/pitcherProj');
-let Batters2018 = require('./models/batters2018');
-let Batters2017 = require('./models/batters2017');
-*/
+
 const PORT = process.env.PORT || 3000;
 
 // DB config
