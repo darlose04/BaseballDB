@@ -4,7 +4,7 @@ const router = express.Router();
 // root route
 router.get('/', (req, res) => {
   res.render('landing', {
-    username: req.user.username
+    // username: req.user.username
   })
 });
 
