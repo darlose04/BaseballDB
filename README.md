@@ -31,4 +31,5 @@ The app will use Bootstrap 4 on the front end for the design and UI, while using
   * Figure out how to create search features that return multiple hits, such as returning players with >20 homers and an OPS >.800
 * when a user logs in, return to the landing page but add a message that welcomes the user
   * display the username of who is logged in on the navbar and also edit the login or logout tabs on navbar depending on user log status
+  * refer to yelpcamp code or just create dashboard page for when a user logs in
 
