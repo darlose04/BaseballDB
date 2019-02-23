@@ -43,7 +43,19 @@ router.post('/register', (req, res) => {
     });
   } else {
     // validation passed
-
+    User.findOne({ username: username })
+      .then(user => {
+        if(user) {
+          // user exists
+          errors.push({ msg: 'Username is already taken' })
+          res.render('register', {
+            errors,
+            username,
+            password,
+            password2
+          });
+        }
+      });
   }
 });
 
