@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 // User model required here when necessary
+const User = require('../models/user');
 
 // login page
 router.get('/login', (req, res) => {
@@ -41,7 +42,8 @@ router.post('/register', (req, res) => {
       password2
     });
   } else {
-    res.send('pass');
+    // validation passed
+
   }
 });
 
