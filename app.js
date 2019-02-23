@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const flash = require('connect-flash');
+const session = require('express-session');
 
 const PORT = process.env.PORT || 3000;
 
@@ -15,6 +17,17 @@ mongoose.connect(db, {useNewUrlParser: true, dbName: 'baseball'})
 
 // Bodyparser
 app.use(express.urlencoded({ extended: false }));
+
+// express session middleware
+app.use(session({
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true
+}));
+
+// connect flash
+app.use(flash());
+
 // set view engine to ejs
 app.set("view engine", "ejs");
 
