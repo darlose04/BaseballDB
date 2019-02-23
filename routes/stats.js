@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { ensureAuthenticated } = require('../config/auth');
 
 // require models
 let BatterProjections = require('../models/batterProj');
@@ -8,7 +9,7 @@ let Batters2018 = require('../models/batters2018');
 let Batters2017 = require('../models/batters2017');
 
 // batting projections route
-router.get('/battingprojections', (req, res) => {
+router.get('/battingprojections', ensureAuthenticated, (req, res) => {
   // get all batter projections from the database
   BatterProjections.find({}, (err, allBatters) => {
     if(err) {
@@ -20,7 +21,7 @@ router.get('/battingprojections', (req, res) => {
 });
 
 // batting 2018 stats route
-router.get('/batting2018', (req, res) => {
+router.get('/batting2018', ensureAuthenticated, (req, res) => {
   Batters2018.find({}, (err, all2018Batters) => {
     if(err) {
       console.log(err);
@@ -31,7 +32,7 @@ router.get('/batting2018', (req, res) => {
 });
 
 // batting 2017 stats route
-router.get('/batting2017', (req, res) => {
+router.get('/batting2017', ensureAuthenticated, (req, res) => {
   Batters2017.find({}, (err, all2017Batters) => {
     if(err) {
       console.log(err);
@@ -42,7 +43,7 @@ router.get('/batting2017', (req, res) => {
 });
 
 // pitching projections route
-router.get('/pitchingprojections', (req, res) => {
+router.get('/pitchingprojections', ensureAuthenticated, (req, res) => {
   // get all pitcher projections from the database
   PitcherProjections.find({}, (err, allPitchers) => {
     if(err) {
