@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 
-// User model required here when necessary
+// User model
 const User = require('../models/user');
 
 // login page
@@ -54,6 +54,27 @@ router.post('/register', (req, res) => {
             username,
             password,
             password2
+          });
+        } else {
+          const newUser = new User({
+            username, // this is es6, same as username: username
+            password
+          });
+
+          // hash password
+          bcrypt.genSalt(10, (err, salt) => {
+            bcrypt.hash(newUser.password, salt, (err, hash) => {
+              if (err) throw err;
+
+              // set password to hashed
+              newUser.password = hash;
+              // save the user
+              newUser.save()
+                .then(user => {
+                  res.redirect('/users/login');
+                })
+                .catch(err => console.log(err));
+            });
           });
         }
       });
