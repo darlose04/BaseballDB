@@ -3,8 +3,12 @@ const app = express();
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
+const passport = require('passport');
 
 const PORT = process.env.PORT || 3000;
+
+// passport config
+require('./config/passport')(passport);
 
 // DB config
 const db = require('./config/keys').MongoURI;
@@ -25,6 +29,10 @@ app.use(session({
   saveUninitialized: true
 }));
 
+// passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
 // connect flash
 app.use(flash());
 
@@ -37,8 +45,6 @@ app.use((req, res, next) => {
 
 // set view engine to ejs
 app.set("view engine", "ejs");
-
-
 
 // Routes
 // index routes
