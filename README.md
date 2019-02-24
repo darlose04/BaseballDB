@@ -20,6 +20,11 @@ In order to access the stats and blog, a user will need to register with a usern
 * Yet to be implemented
 * Will allow users to post anything they deem interesting or relevant
 
+#### Chat feature
+* Yet to be implemented
+* Will probably use socket.io
+* There will be a group chat, as well as the option for private chats between users
+
 #### Batting
 
 ![2019 Batting Projections](https://github.com/darlose04/BaseballDB/blob/master/screengrabs/battingProjections.png "Batting Projections")
