@@ -7,12 +7,22 @@ A Node.js application hosted on Heroku. Contains statistics specific to a fantas
 
 #### Landing Page
 ![Landing Page](https://github.com/darlose04/BaseballDB/blob/master/screengrabs/landingPage.png "Landing Page")
+
 #### Blog
 * Yet to be implemented
 * Will allow users to post anything they deem interesting or relevant
 
-#### 2019 Season Projections
-* Batting
+#### Batting
+
+![2019 Batting Projections](https://github.com/darlose04/BaseballDB/blob/master/screengrabs/battingProjections.png "Batting Projections")
+
+![2018 Batting Stats](https://github.com/darlose04/BaseballDB/blob/master/screengrabs/batting2018.png "2018 Batting Stats")
+
+![2017 Batting Stats](https://github.com/darlose04/BaseballDB/blob/master/screengrabs/batting2017.png "2017 Batting Stats")
+
+#### Pitching
+
+![2019 Pitching Projections](https://github.com/darlose04/BaseballDB/blob/master/screengrabs/pitchingProjections.png "Pitching Projections")
 
 
 
