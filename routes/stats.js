@@ -75,7 +75,13 @@ router.get('/pitching2018', (req, res) => {
 // pitching 2017 stats route
 router.get('/pitching2017', (req, res) => {
   // get all 2017 pitching from the database (not in db yet though)
-  res.render("pitchers2017");
+  Pitchers2017.find({}, (err, all2018Pitchers) => {
+    if(err) {
+      console.log(err);
+    } else {
+      res.render("pitchers2017", {pitchers2017: all2017Pitchers});
+    }
+  });
 });
 
 module.exports = router;
