@@ -8,6 +8,14 @@ A Node.js application hosted on Heroku. Contains statistics specific to a fantas
 #### Landing Page
 ![Landing Page](https://github.com/darlose04/BaseballDB/blob/master/screengrabs/landingPage.png "Landing Page")
 
+#### Register and Login
+
+In order to access the stats and blog, a user will need to register with a username and password
+
+![Register Page](https://github.com/darlose04/BaseballDB/blob/master/screengrabs/register.png "Register")
+
+![Login Page](https://github.com/darlose04/BaseballDB/blob/master/screengrabs/login.png "Login")
+
 #### Blog
 * Yet to be implemented
 * Will allow users to post anything they deem interesting or relevant
@@ -23,6 +31,8 @@ A Node.js application hosted on Heroku. Contains statistics specific to a fantas
 #### Pitching
 
 ![2019 Pitching Projections](https://github.com/darlose04/BaseballDB/blob/master/screengrabs/pitchingProjections.png "Pitching Projections")
+
+* Stats for 2017 and 2018 pitching still need to be organized properly and added to database
 
 
 
