@@ -54,4 +54,16 @@ router.get('/pitchingprojections', ensureAuthenticated, (req, res) => {
   });
 });
 
+// pitching 2018 stats route
+router.get('/pitching2018', ensureAuthenticated, (req, res) => {
+  // get all 2018 pitching from the database (not in db yet though)
+  res.render("pitchers2018");
+});
+
+// pitching 2017 stats route
+router.get('/pitching2017', ensureAuthenticated, (req, res) => {
+  // get all 2017 pitching from the database (not in db yet though)
+  res.render("pitchers2017");
+});
+
 module.exports = router;
