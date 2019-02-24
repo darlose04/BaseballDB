@@ -4,9 +4,11 @@ const { ensureAuthenticated } = require('../config/auth');
 
 // require models
 let BatterProjections = require('../models/batterProj');
-let PitcherProjections = require('../models/pitcherProj');
 let Batters2018 = require('../models/batters2018');
 let Batters2017 = require('../models/batters2017');
+let PitcherProjections = require('../models/pitcherProj');
+let Pitchers2018 = require('../models/pitchers2018');
+let Pitchers2017 = require('../models/pitchers2017');
 
 // batting projections route
 router.get('/battingprojections', ensureAuthenticated, (req, res) => {
