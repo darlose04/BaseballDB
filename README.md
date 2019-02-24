@@ -6,8 +6,7 @@ A Node.js application hosted on Heroku. Contains statistics specific to a fantas
 ## Features
 
 #### Landing Page
-![Landing Page](https://github.com/darlose04/BaseballDB/blob/master/screengrabs/Screenshot%20from%202019-02-24%2014-54-24.png)
-
+![Landing Page](https://github.com/darlose04/BaseballDB/blob/master/screengrabs/landingPage.png "Landing Page")
 #### Blog
 * Yet to be implemented
 * Will allow users to post anything they deem interesting or relevant
