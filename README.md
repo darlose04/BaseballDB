@@ -74,6 +74,9 @@ Fill in the appropriate information in place of the `<>` values. Since these are
 ## License
 MIT License
 
+***
+# Developer Notes
+
 ## Possible Implementations
 * Blog page for league members to post stuff
   * add comment sections

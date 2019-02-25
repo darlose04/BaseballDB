@@ -12,7 +12,7 @@
     "url": "git+https://github.com/darlose04/BaseballDB.git"
   },
   "author": "Zach Smith",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/darlose04/BaseballDB/issues"
   },
