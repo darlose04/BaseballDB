@@ -41,27 +41,38 @@ In order to access the stats and blog, a user will need to register with a usern
 
 ## Installation
 
-In order for this application to work locally, you will need to have Node.js and npm installed.  
+In order for this application to work locally, you will need to have Node.js and npm installed:  
 [Node.js](https://nodejs.org/en/)  
 [npm](https://www.npmjs.com/get-npm)
 
-You will also need git in order to clone this repository.  
+You will also need git in order to clone this repository:  
 [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 Cloning the repository:  
-`git clone https://github.com/darlose04/BaseballDB.git`
+`git clone https://github.com/darlose04/BaseballDB.git`\
 cd into the new directory:  
 `cd BaseballDB/`
 
+In order for the application to work, you will need to install the following packages:
+bcryptjs, connect-flash, ejs, express, express-session, mongoose, passport, passport-local, and nodemon.\
+This can all be done with one command:\
+`npm install`
 
+You will also need a version of MongoDB, whether it be [locally](https://docs.mongodb.com/manual/installation/#mongodb-community-edition), with [Mongo Atlas](https://www.mongodb.com/), which you will need to sign up for, or another version you may be familiar with. You may need a local version of MongoDB in order to use Atlas, I'm not sure.
 
+If using Mongo Atlas, you will need to change the MongoURI link in the config/keys.js file to the one related to your account. This is found under the Overiew tab; click on 'Connect', then click 'Connect Your Application', then copy the link under the 'Standard connection string' and paste it into config/keys.js as the MongoURI value. Replace <PASSWORD> in the string with your user password (created when you create a read/write user).\
+You will also want to head to the Security tab and set up a user with read/write access, as well as setting an IP Whitelist so you can connect to your cluster from a certain IP address. I just set mine to 0.0.0.0/0 so I can connect to it from any IP address.
 
+Now you'll want to create a database by clicking on 'Collections'. Name the database whatever, but it will need to match at `app.js 18:55`. You may also want to create the collections here, which are detailed in the mongoose schemas in the models folder.
 
+Once this is done, you will want to import the CSV files that are located in the statistics directory. This is done by going into the 'Collections' tab, then clicking on 'Command Line Tools'. You want to use the Data Import tool, which contains the code you want to run in your command line:
 
+`mongoimport --host Fantasy-Baseball-shard-0/fantasy-baseball-shard-00-00-jtaa4.mongodb.net:27017,fantasy-baseball-shard-00-01-jtaa4.mongodb.net:27017,fantasy-baseball-shard-00-02-jtaa4.mongodb.net:27017 --ssl --username <ADMIN> --password <PASSWORD> --authenticationDatabase admin --db <DATABASE> --collection <COLLECTION> --type <FILETYPE> --headerline --file <FILENAME>`
 
+Fill in the appropriate information in place of the `<>` values. Since these are CSV files, the `--headerline` flag is needed.
 
-
-
+## License
+MIT License
 
 ## Possible Implementations
 * Blog page for league members to post stuff
