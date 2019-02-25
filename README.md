@@ -39,6 +39,19 @@ In order to access the stats and blog, a user will need to register with a usern
 
 * Stats for 2017 and 2018 pitching still need to be organized properly and added to database
 
+## Installation
+
+In order for this application to work locally, you will need to have Node.js and npm installed.
+[Node.js](https://nodejs.org/en/)
+[npm](https://www.npmjs.com/get-npm)
+
+You will also need git in order to clone this repository.
+[git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+Cloning the repository:
+`git clone https://github.com/darlose04/BaseballDB.git`
+cd into the new directory:
+`cd BaseballDB/`
 
 
 
