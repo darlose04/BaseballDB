@@ -41,16 +41,16 @@ In order to access the stats and blog, a user will need to register with a usern
 
 ## Installation
 
-In order for this application to work locally, you will need to have Node.js and npm installed.
-[Node.js](https://nodejs.org/en/)
+In order for this application to work locally, you will need to have Node.js and npm installed.  
+[Node.js](https://nodejs.org/en/)  
 [npm](https://www.npmjs.com/get-npm)
 
-You will also need git in order to clone this repository.
+You will also need git in order to clone this repository.  
 [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-Cloning the repository:
+Cloning the repository:  
 `git clone https://github.com/darlose04/BaseballDB.git`
-cd into the new directory:
+cd into the new directory:  
 `cd BaseballDB/`
 
 
