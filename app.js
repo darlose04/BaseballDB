@@ -36,6 +36,12 @@ app.use(passport.session());
 // connect flash
 app.use(flash());
 
+// create currentUser
+app.use((req, res, next) => {
+  res.locals.currentUser = req.user;
+  next();
+});
+
 // global vars for connect-flash messages
 app.use((req, res, next) => {
   res.locals.success_msg = req.flash('success_msg');
