@@ -2,36 +2,36 @@
 
 <div class="container">
   <div class="row">
-    <h3>Search the Hitting Projections according to league relevant statistics:</h3>
+
     <div>
-      <form action="/search/batting" method="GET">
+      <form action="/search/batting" method="SEARCH">
         <div class="form-group">
           <label>Runs >=
-              <input class="form-control" type="text" name="R" placeholder="Runs">
+              <input class="form-control" type="text" name="runs" placeholder="Runs">
           </label>
         </div>
         <div class="form-group">
           <label>
             Homeruns >=
-            <input class="form-control" type="text" name="HR" placeholder="Homeruns">
+            <input class="form-control" type="text" name="homeruns" placeholder="Homeruns">
           </label>
         </div>
         <div class="form-group">
           <label>
             RBIs >=
-            <input class="form-control" type="text" name="RBI" placeholder="RBIs">
+            <input class="form-control" type="text" name="rbi" placeholder="RBIs">
           </label>
         </div>
         <div class="form-group">
           <label>
             SB >=
-            <input class="form-control" type="text" name="SB" placeholder="Stolen Bases">
+            <input class="form-control" type="text" name="sb" placeholder="Stolen Bases">
           </label>
         </div>
         <div class="form-group">
           <label>
             OPS >=
-            <input class="form-control" type="text" name="OPS" placeholder="OPS">
+            <input class="form-control" type="text" name="ops" placeholder="OPS">
           </label>
         </div>
         <div class="form-group">
@@ -41,5 +41,6 @@
     </div>
   </div>
 </div>
+
 
 <% include ./partials/footer %>
