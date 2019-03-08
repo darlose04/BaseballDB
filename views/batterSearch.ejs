@@ -1,5 +1,45 @@
 <% include ./partials/header %>
 
-
+<div class="container">
+  <div class="row">
+    <h3>Search the Hitting Projections according to league relevant statistics:</h3>
+    <div>
+      <form action="/search/batting" method="GET">
+        <div class="form-group">
+          <label>Runs >=
+              <input class="form-control" type="text" name="R" placeholder="Runs">
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            Homeruns >=
+            <input class="form-control" type="text" name="HR" placeholder="Homeruns">
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            RBIs >=
+            <input class="form-control" type="text" name="RBI" placeholder="RBIs">
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            SB >=
+            <input class="form-control" type="text" name="SB" placeholder="Stolen Bases">
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            OPS >=
+            <input class="form-control" type="text" name="OPS" placeholder="OPS">
+          </label>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-large btn-primary btn-block">Search!</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
 <% include ./partials/footer %>
