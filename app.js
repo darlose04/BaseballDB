@@ -5,6 +5,8 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
 
+// const User = require('./models/user');
+
 const PORT = process.env.PORT || 3000;
 
 // passport config
@@ -42,11 +44,38 @@ app.use((req, res, next) => {
   next();
 });
 
+// let users = User.find({}, (err, allUsers) => {
+//   if(err) {
+//     console.log(err);
+//   } else {
+//     users = {users: allUsers}
+//   }
+// });
+
+// access all users in database
+// app.use((req, res, next) => {
+//   res.locals.users = req.users;
+//   next();
+// });
+
+// User.find({}, (err, allUsers) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     let users = {users: allUsers};
+//     // console.log(users.users[0].username);
+//     for (let i = 0; i < users.users.length; i++) {
+//       console.log(users.users[i].username);
+//     }
+//   }
+// });
+
 // global vars for connect-flash messages
 app.use((req, res, next) => {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
+  // res.locals.ops = 0.85;
   next();
 });
 
