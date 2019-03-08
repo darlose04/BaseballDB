@@ -20,11 +20,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/dashboard">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Search Projections</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Batting Search</a>
+                            <a href="#" class="dropdown-item">Pitching Search</a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Batting</a>
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Batting Stats</a>
                         <div class="dropdown-menu">
                             <a href="/stats/battingprojections" class="dropdown-item">Projections</a>
                             <a href="/stats/batting2018" class="dropdown-item">2018</a>
@@ -32,7 +36,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Pitching</a>
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Pitching Stats</a>
                         <div class="dropdown-menu">
                             <a href="/stats/pitchingprojections" class="dropdown-item">Projections</a>
                             <a href="/stats/pitching2018" class="dropdown-item">2018</a>
@@ -50,7 +54,15 @@
                 <li class="nav-item">
                     <a href="/users/register" class="nav-link">Register</a>
                 </li>
-                <% } else { %>   
+                <% } else { %>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Users</a>
+                    <div class="dropdown-menu">
+                        
+                        <a href="#" class="dropdown-item"></a>
+                        
+                    </div>
+                </li>
                 <li class="nav-item">
                     <button class="nav-link btn btn-primary text-light" data-toggle="modal"
                         data-target="#mymodal">Chat as <%= currentUser.username %></button>
