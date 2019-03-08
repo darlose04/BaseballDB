@@ -41,7 +41,16 @@
   </table>
   <!-- <hr>
   <h1>This is a new table to practice search methods</h1>
-  <table class="table table-sm table-hover table-striped">
+  <hr>
+  
+  <label>
+    Search OPS:
+    <input id="ops" type="search">
+  </label>
+
+  
+  
+  <table class="table table-sm table-hover table-striped" id="hitters">
     <thead class="thead-dark">
       <tr>
         <th>Player</th>
@@ -60,7 +69,7 @@
     </thead>
     <tbody>
       <% batters.forEach(function(batter) { %> 
-        <% if (batter.OPS >= 0.85 && batter.HR >= 30) { %> 
+        <% if (batter.OPS >= 0.900 && batter.HR >= 30) { %> 
           <tr>
             <td><%= batter.Player %></td>
             <td><%= batter.Team %></td>
@@ -78,7 +87,7 @@
         <% } %>
       <% }) %>
       </tbody>
-  </table> -->
-</div>
+  </table>
+</div> -->
 
 <% include ./partials/footer %>
