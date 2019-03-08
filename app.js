@@ -89,5 +89,7 @@ app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 // link to stats js routes
 app.use('/stats', require('./routes/stats'));
+// link to search routes
+app.use('/search', require('./routes/search'));
 
 app.listen(PORT, () => console.log(`Baseball app listening on port ${PORT}`));
