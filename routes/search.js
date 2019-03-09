@@ -12,13 +12,16 @@ let PitcherProjections = require('../models/pitcherProj');
 
 // batting search route
 router.get('/batting', (req, res) => {
+  res.render("search/batterSearch");
+});
+
+router.post('/batting', (req, res) => {
   // get data from form
   let runs = req.body.runs;
   let homeruns = req.body.homeruns;
   let rbi = req.body.rbi;
   let sb = req.body.sb;
   let ops = req.body.ops;
-
 
   BatterProjections.find({
     R: {$gte: runs}, 
@@ -30,20 +33,17 @@ router.get('/batting', (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      res.render("batterSearch", {batters: allQualifiedBatters});
+      res.render("search/batterSearchResult", {batters: allQualifiedBatters});
     }
   });
-  
-
-  
-  
 });
-
 
 
 // pitching search route
 router.get('/pitching', (req, res) => {
-  res.render("pitcherSearch");
+  res.render("search/pitcherSearch");
 });
+
+
 
 module.exports = router;
