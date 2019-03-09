@@ -44,6 +44,29 @@ router.get('/pitching', (req, res) => {
   res.render("search/pitcherSearch");
 });
 
+router.post('/pitching', (req, res) => {
+  // get data from form
+  let strikeouts = req.body.strikeouts;
+  let holds = req.body.holds;
+  let saves = req.body.saves;
+  let whip = req.body.whip;
+  let era = req.body.era;
+  let qs = req.body.qs;
 
+  PitcherProjections.find({
+    K: {$gte: strikeouts},
+    HLD: {$gte: holds},
+    SV: {$gte: saves},
+    WHIP: {$lte: whip},
+    ERA: {$lte: era},
+    QS: {$gte: qs}
+  }, (err, allQualifiedPitchers) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("search/pitcherSearchResult", {pitchers: allQualifiedPitchers});
+    }
+  });
+});
 
 module.exports = router;
