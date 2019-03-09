@@ -1,0 +1,44 @@
+<% include ../partials/header %>
+
+<div class="container">
+  <div class="row">
+    <div>
+      <form action="/search/batting" method="POST">
+        <div class="form-group">
+          <label>Runs >=
+              <input class="form-control" type="text" name="runs" placeholder="Runs">
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            Homeruns >=
+            <input class="form-control" type="text" name="homeruns" placeholder="Homeruns">
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            RBIs >=
+            <input class="form-control" type="text" name="rbi" placeholder="RBIs">
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            SB >=
+            <input class="form-control" type="text" name="sb" placeholder="Stolen Bases">
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            OPS >=
+            <input class="form-control" type="text" name="ops" placeholder="OPS">
+          </label>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-large btn-primary btn-block">Search!</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer %>
