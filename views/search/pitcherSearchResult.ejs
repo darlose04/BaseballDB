@@ -1,0 +1,42 @@
+<% include ../partials/header %>
+
+<div class="container">
+  <h1 class="mb-3">Pitching Search Results</h1>
+
+  <table id="pitcher-projections" class="table table-sm table-hover table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Player</th>
+        <th>Team</th>
+        <th>Games</th>
+        <th>GS</th>
+        <th>QS</th>
+        <th>IP</th>
+        <th>K</th>
+        <th>HLD</th>
+        <th>SV</th>
+        <th>ERA</th>
+        <th>WHIP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% pitchers.forEach(function(pitcher) { %> 
+      <tr>
+        <td><%= pitcher.Player %></td>
+        <td><%= pitcher.Team %></td>
+        <td><%= pitcher.G %></td>
+        <td><%= pitcher.GS %></td>
+        <td><%= pitcher.QS %></td>
+        <td><%= pitcher.IP %></td>
+        <td><%= pitcher.K %></td>
+        <td><%= pitcher.HLD %></td>
+        <td><%= pitcher.SV %></td>
+        <td><%= pitcher.ERA %></td>
+        <td><%= pitcher.WHIP %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+
+<% include ../partials/footer %>
