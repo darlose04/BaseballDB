@@ -4,14 +4,20 @@
   <h1>The League of Ordinary Gentlemen</h1>
   <p class="lead">Welcome to the Baseball Database <%= username %></p>
 
-  <h4 class="mb-3">View statistics from previous seasons, as well as projections for the upcoming season:</h4>
-  <ul class="list-group">
+  <h4 class="mb-3">View statistics from previous seasons, as well as projections for the upcoming season. In addition, these tables can be sorted by individual columns.</h4>
+  <ul class="list-group mb-5">
     <a href="/stats/battingprojections" class="list-group-item list-group-item-info">2019 Hitting Projections</a>
     <a href="/stats/batting2018" class="list-group-item list-group-item-info">2018 Hitting Statistics</a>
     <a href="/stats/batting2017" class="list-group-item list-group-item-info">2017 Hitting Statistics</a>
     <a href="/stats/pitchingprojections" class="list-group-item list-group-item-warning">2019 Pitching Projections</a>
     <a href="/stats/pitching2018" class="list-group-item list-group-item-warning">2018 Pitching Statistics</a>
     <a href="/stats/pitching2017" class="list-group-item list-group-item-warning">2017 Pitching Statistics</a>
+  </ul>
+
+  <h4>Or, you can search the database of the upcoming season's projections using league relevant statistics.</h4>
+  <ul class="list-group">
+    <a href="/search/batting" class="list-group-item list-group-item-info">Batter Search</a>
+    <a href="/search/pitching" class="list-group-item list-group-item-warning">Pitcher Search</a>
   </ul>
 </div>
 
