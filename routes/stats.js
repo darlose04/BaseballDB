@@ -15,7 +15,7 @@ let Pitchers2017 = require('../models/pitchers2017');
 //===============================
 
 // batting projections route
-router.get('/battingprojections', (req, res) => {
+router.get('/battingprojections', ensureAuthenticated, (req, res) => {
   // get all batter projections from the database
   BatterProjections.find({}, (err, allBatters) => {
     if(err) {
@@ -28,7 +28,7 @@ router.get('/battingprojections', (req, res) => {
 });
 
 // batting 2018 stats route
-router.get('/batting2018', (req, res) => {
+router.get('/batting2018', ensureAuthenticated, (req, res) => {
   Batters2018.find({}, (err, all2018Batters) => {
     if(err) {
       console.log(err);
@@ -39,7 +39,7 @@ router.get('/batting2018', (req, res) => {
 });
 
 // batting 2017 stats route
-router.get('/batting2017', (req, res) => {
+router.get('/batting2017', ensureAuthenticated, (req, res) => {
   Batters2017.find({}, (err, all2017Batters) => {
     if(err) {
       console.log(err);
@@ -50,7 +50,7 @@ router.get('/batting2017', (req, res) => {
 });
 
 // pitching projections route
-router.get('/pitchingprojections', (req, res) => {
+router.get('/pitchingprojections', ensureAuthenticated, (req, res) => {
   // get all pitcher projections from the database
   PitcherProjections.find({}, (err, allPitchers) => {
     if(err) {
@@ -62,7 +62,7 @@ router.get('/pitchingprojections', (req, res) => {
 });
 
 // pitching 2018 stats route
-router.get('/pitching2018', (req, res) => {
+router.get('/pitching2018', ensureAuthenticated, (req, res) => {
   // get all 2018 pitching from the database (not in db yet though)
   Pitchers2018.find({}, (err, all2018Pitchers) => {
     if(err) {
@@ -74,7 +74,7 @@ router.get('/pitching2018', (req, res) => {
 });
 
 // pitching 2017 stats route
-router.get('/pitching2017', (req, res) => {
+router.get('/pitching2017', ensureAuthenticated, (req, res) => {
   // get all 2017 pitching from the database (not in db yet though)
   Pitchers2017.find({}, (err, all2017Pitchers) => {
     if(err) {
