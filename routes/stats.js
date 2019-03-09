@@ -21,7 +21,7 @@ router.get('/battingprojections', (req, res) => {
     if(err) {
       console.log(err);
     } else {
-      res.render("batterProjections", {batters: allBatters});
+      res.render("stats/batterProjections", {batters: allBatters});
     }
   });
   
@@ -33,7 +33,7 @@ router.get('/batting2018', (req, res) => {
     if(err) {
       console.log(err);
     } else {
-      res.render("batters2018", {batters2018: all2018Batters});
+      res.render("stats/batters2018", {batters2018: all2018Batters});
     }
   });
 });
@@ -44,7 +44,7 @@ router.get('/batting2017', (req, res) => {
     if(err) {
       console.log(err);
     } else {
-      res.render("batters2017", {batters2017: all2017Batters});
+      res.render("stats/batters2017", {batters2017: all2017Batters});
     }
   });
 });
@@ -56,7 +56,7 @@ router.get('/pitchingprojections', (req, res) => {
     if(err) {
       console.log(err);
     } else {
-      res.render("pitcherProjections", {pitchers: allPitchers});
+      res.render("stats/pitcherProjections", {pitchers: allPitchers});
     }
   });
 });
@@ -68,7 +68,7 @@ router.get('/pitching2018', (req, res) => {
     if(err) {
       console.log(err);
     } else {
-      res.render("pitchers2018", {pitchers2018: all2018Pitchers});
+      res.render("stats/pitchers2018", {pitchers2018: all2018Pitchers});
     }
   });
 });
@@ -80,7 +80,7 @@ router.get('/pitching2017', (req, res) => {
     if(err) {
       console.log(err);
     } else {
-      res.render("pitchers2017", {pitchers2017: all2017Pitchers});
+      res.render("stats/pitchers2017", {pitchers2017: all2017Pitchers});
     }
   });
 });
