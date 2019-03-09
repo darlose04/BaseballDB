@@ -1,0 +1,93 @@
+<% include ./partials/header %>
+
+<div class="container">
+  <h1 class="mb-3">Batting Projections</h1>
+
+  <table id="batter-projections" class="table table-sm table-hover table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Player</th>
+        <th>Team</th>
+        <th>Position</th>
+        <th>Games</th>
+        <th>Runs</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>SB</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% batters.forEach(function(batter) { %> 
+      <tr>
+        <td><%= batter.Player %></td>
+        <td><%= batter.Team %></td>
+        <td><%= batter.Pos %></td>
+        <td><%= batter.G %></td>
+        <td><%= batter.R %></td>
+        <td><%= batter.HR %></td>
+        <td><%= batter.RBI %></td>
+        <td><%= batter.SB %></td>
+        <td><%= batter.AVG %></td>
+        <td><%= batter.OBP %></td>
+        <td><%= batter.SLG %></td>
+        <td><%= batter.OPS %></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <!-- <hr>
+  <h1>This is a new table to practice search methods</h1>
+  <hr>
+  
+  <label>
+    Search OPS:
+    <input id="ops" type="search">
+  </label>
+
+  
+  
+  <table class="table table-sm table-hover table-striped" id="hitters">
+    <thead class="thead-dark">
+      <tr>
+        <th>Player</th>
+        <th>Team</th>
+        <th>Position</th>
+        <th>Games</th>
+        <th>Runs</th>
+        <th>HR</th>
+        <th>RBI</th>
+        <th>SB</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% batters.forEach(function(batter) { %> 
+        <% if (batter.OPS >= 0.900 && batter.HR >= 30) { %> 
+          <tr>
+            <td><%= batter.Player %></td>
+            <td><%= batter.Team %></td>
+            <td><%= batter.Pos %></td>
+            <td><%= batter.G %></td>
+            <td><%= batter.R %></td>
+            <td><%= batter.HR %></td>
+            <td><%= batter.RBI %></td>
+            <td><%= batter.SB %></td>
+            <td><%= batter.AVG %></td>
+            <td><%= batter.OBP %></td>
+            <td><%= batter.SLG %></td>
+            <td><%= batter.OPS %></td>
+          </tr>
+        <% } %>
+      <% }) %>
+      </tbody>
+  </table>
+</div> -->
+
+<% include ./partials/footer %>
