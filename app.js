@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+const io = require('socket.io').sockets;
 
 // const User = require('./models/user');
 
@@ -17,7 +18,12 @@ const db = require('./config/keys').MongoURI;
 
 // Connect to DB
 // mongoose.connect("mongodb://localhost:27017/baseballstats", {useNewUrlParser: true});
-mongoose.connect(db, {useNewUrlParser: true, dbName: 'baseball'})
+mongoose.connect(db, {useNewUrlParser: true, dbName: 'baseball'}, (err, client) {
+  if (err) {
+    throw err;
+  } 
+  
+})
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
@@ -43,32 +49,6 @@ app.use((req, res, next) => {
   res.locals.currentUser = req.user;
   next();
 });
-
-// let users = User.find({}, (err, allUsers) => {
-//   if(err) {
-//     console.log(err);
-//   } else {
-//     users = {users: allUsers}
-//   }
-// });
-
-// access all users in database
-// app.use((req, res, next) => {
-//   res.locals.users = req.users;
-//   next();
-// });
-
-// User.find({}, (err, allUsers) => {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     let users = {users: allUsers};
-//     // console.log(users.users[0].username);
-//     for (let i = 0; i < users.users.length; i++) {
-//       console.log(users.users[i].username);
-//     }
-//   }
-// });
 
 // global vars for connect-flash messages
 app.use((req, res, next) => {
