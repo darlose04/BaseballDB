@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
-const io = require('socket.io').sockets;
+const server = require('http').Server(app)
+const io = require('socket.io')(server);
 
-// const User = require('./models/user');
+// require Chat model
+const Chat = require('./models/chat');
 
 const PORT = process.env.PORT || 3000;
 
@@ -18,11 +20,27 @@ const db = require('./config/keys').MongoURI;
 
 // Connect to DB
 // mongoose.connect("mongodb://localhost:27017/baseballstats", {useNewUrlParser: true});
-mongoose.connect(db, {useNewUrlParser: true, dbName: 'baseball'}, (err, client) {
+mongoose.connect(db, {useNewUrlParser: true, dbName: 'baseball'}, (err) => {
   if (err) {
     throw err;
   } 
   
+  // connect to socket io
+  io.on('connection', (socket) => {
+    // create function to send status to server
+    sendStatus = (s) => {
+      socket.emit('status', s);
+    }
+
+    Chat.find().limit(150).sort({ _id:1 }).toArray((err, res) => {
+      if (err) {
+        throw err;
+      }
+
+      // emit the messages
+      socket.emit('output', res);
+    });
+  });
 })
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
