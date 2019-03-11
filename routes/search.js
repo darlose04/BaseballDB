@@ -11,11 +11,11 @@ let PitcherProjections = require('../models/pitcherProj');
 //===============================
 
 // batting search route
-router.get('/batting', ensureAuthenticated, (req, res) => {
+router.get('/batting', (req, res) => {
   res.render("search/batterSearch");
 });
 
-router.post('/batting', ensureAuthenticated, (req, res) => {
+router.post('/batting', (req, res) => {
   // get data from form
   let runs = req.body.runs;
   let homeruns = req.body.homeruns;
@@ -40,11 +40,11 @@ router.post('/batting', ensureAuthenticated, (req, res) => {
 
 
 // pitching search route
-router.get('/pitching', ensureAuthenticated, (req, res) => {
+router.get('/pitching', (req, res) => {
   res.render("search/pitcherSearch");
 });
 
-router.post('/pitching', ensureAuthenticated, (req, res) => {
+router.post('/pitching', (req, res) => {
   // get data from form
   let strikeouts = req.body.strikeouts;
   let holds = req.body.holds;
