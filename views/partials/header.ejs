@@ -57,24 +57,7 @@
                 <% } else { %>
                 
                 <li class="nav-item">
-                    <button class="nav-link btn btn-primary text-light" data-toggle="modal"
-                        data-target="#mymodal">Chat as <%= currentUser.username %></button>
-                    <div id="mymodal" class="modal fade" tab-index="-1" role="dialog" aria-labelledby="scrollableTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-scrollable" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="scrollableTitle">Chat</h5>
-                                    <button class="close" data-dismiss="modal">&timesb;</button>
-                                </div>
-                                <div class="modal-body">
-                                    Will contain the group chat in the future!
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="/chat" class="nav-link">Chat as <%= currentUser.username %></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/users/logout" class="nav-link">Logout</a>
