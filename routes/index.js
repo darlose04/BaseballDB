@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const { ensureAuthenticated } = require('../config/auth');
+const server = require('http').Server(router);
+const io = require('socket.io')(server);
+const path = require('path');
+const Chat = require('../models/chat');
 
 // root route
 router.get('/', (req, res) => {
@@ -13,5 +17,14 @@ router.get('/dashboard', (req, res) => {
     username: req.user.username
   });
 });
+
+// chat route
+router.get('/chat', (req, res) => {
+  res.render('chat', {
+    username: req.user.username
+  });
+});
+
+
 
 module.exports = router;
