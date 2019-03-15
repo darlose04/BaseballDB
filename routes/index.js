@@ -12,14 +12,14 @@ router.get('/', (req, res) => {
 });
 
 // Dashboard
-router.get('/dashboard', (req, res) => {
+router.get('/dashboard', ensureAuthenticated, (req, res) => {
   res.render('dashboard', {
     username: req.user.username
   });
 });
 
 // chat route
-router.get('/chat', (req, res) => {
+router.get('/chat', ensureAuthenticated, (req, res) => {
   res.render('chat', {
     username: req.user.username
   });
